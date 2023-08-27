@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Article
 # models.py 의 Article 을 불러오겠다. 
 # Article 에는 제목,내용,작성시간이 있으니 
@@ -20,9 +20,13 @@ def index(request):
 
 def contact(request): 
     if request.method == 'POST': # post요청일때 
-        pass       
+        contact_eng = ContactForm(request.POST)   # 프론트엔드에 검증
+        if contact_eng.is_valid():           #통과되면 백엔드에 재검증
+            contact_eng.save()            # 다 통과된것만 저장 
+
+            return redirect('articles:index') # 일단 index로 보내보자.     
         
-    else:                     # get요청일때  
+    else: 
         contact_eng = ContactForm()
 
     context = {
