@@ -9,14 +9,14 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-body-warning">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Data Researcher</a>
+          <a class="navbar-brand" href="#"><strong>백혜진의 데이터분석</strong></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#"> 백혜진의 </a> 
+                <a class="nav-link active" aria-current="page" href="#"><strong>메인화면</strong></a> 
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">이력서보기</a>
@@ -34,18 +34,25 @@
                 <li class="nav-item">
                   <a class="nav-link" href="#">공부블로그 보기</a>
                 </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">연락하기</a>
+                </li>
               </li>
             </ul>
             <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">검색</button>
+              <input class="form-control me-2" type="search" placeholder="검색" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
           </div>
         </div>
       </nav>
       <!--NavBar바로 아래 index,create,about 클릭링크-->
-      <a href="{% url 'articles:index' %}" style="color: rgb(27, 172, 27)">Home</a> 
-      <a href="{% url 'articles:contact' %}" style="color: rgb(27, 172, 27)">Contact me</a>
+      <a href=# style="color: rgb(27, 172, 27);" class="btn"><strong>Beck's Data Reserch</strong></a> 
+      <a href="{% url 'articles:index' %}" style="color: rgb(27, 172, 27);" class="btn">Home</a> 
+      <a href="{% url 'articles:resume' %}" style="color:rgb(27, 172, 27);" class="btn">Resume</a>
+      <a href="{% url 'articles:projects' %}" style="color:rgb(27, 172, 27);" class="btn">Projects</a>
+      <a href="{% url 'articles:daily' %}" style="color: rgb(27, 172, 27);" class="btn"">Daily</a>
+      <a href="{% url 'articles:contact' %}" style="color: rgb(27, 172, 27);" class="btn"">Contact</a>
 
     <div class="container">
       {% block content %}

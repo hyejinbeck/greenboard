@@ -18,3 +18,12 @@ def index(request):
 
 def contact(request): 
     pass 
+
+def resume(request): 
+    pass
+
+def projects(request): 
+    pass
+
+def daily(request): 
+    pass
