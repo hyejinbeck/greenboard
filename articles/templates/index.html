@@ -1,6 +1,25 @@
-{% extends 'base.html'%}   # 위에 base.html을 다 가져오겠다.
+{% extends 'base.html'%}
 
 {% block content %}
-    <h1> index </h1>   
-    <p> 이제 여기에 내용물이 들어갑니다.</p>
+    <h1>메인화면</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+            <th>프로젝트</th>
+            <th>자세히보기</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for article in articles %}
+                <tr>
+                    <td>{{article.title}}</td>
+                    <td>링크</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+
+    </table>
+
 {% endblock %}
