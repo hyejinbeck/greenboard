@@ -1,21 +1,24 @@
 {% extends 'base.html'%}
 
 {% block content %}
-    <h1>메인화면</h1>
+<br>
+        <h5 style="color: orange">Good Researcher in Good Morning </h5>
+        <h2>안녕하세요! <br>데이터 분석가 백혜진입니다. </h2>
+        <br>
 
     <table class="table">
         <thead>
             <tr>
-            <th>프로젝트</th>
+            <th>프로젝트 목록</th>
             <th>자세히보기</th>
             </tr>
         </thead>
 
         <tbody>
-            {% for article in articles %}
+            {% for article in articles %} 
                 <tr>
                     <td>{{article.title}}</td>
-                    <td>링크</td>
+                    <td style="color: orange"> 포트폴리오</td>
                 </tr>
             {% endfor %}
         </tbody>

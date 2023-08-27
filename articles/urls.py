@@ -8,6 +8,5 @@ urlpatterns = [
     path('',views.index, name='index'),
     # 기본 articles/   => index라고 부르겠다. 
     # 기본 index.html 페이지는 views.py의 detail함수를 사용해서 보여진다. 
-    path('create/', views.create, name='create'), # 추가 
-    path('about/', views.about, name='about'), # 추가 
+    path('contact/', views.contact, name='contact'), # 추가 
 ]

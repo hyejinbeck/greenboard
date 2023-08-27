@@ -6,7 +6,7 @@ from .models import Article
 
 # Create your views here.
 def index(request): 
-    articles = Article.objects.all()
+    articles = Article.objects.all().order_by('-id') #최신글먼저로 역순정렬 order_by('-id') 
     # 가져오는 Aarticle의 모든것을 articles변수화 
 
     context = {        # 보여지는 내용은 
@@ -16,8 +16,5 @@ def index(request):
     return render(request, 'index.html', context)
             # 요청값은, index.html로 보여지며, 안에 내용이 들어있다.
 
-def create(request): 
+def contact(request): 
     pass 
-
-def about(request): 
-    pass
