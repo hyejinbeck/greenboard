@@ -3,6 +3,8 @@ from .models import Article
 # models.py 의 Article 을 불러오겠다. 
 # Article 에는 제목,내용,작성시간이 있으니 
 # 불러와서 아래의 구성으로 보여주게 한다. 
+from .forms import ContactForm
+# forms.py의 ContactForm을 불러오겠다. 
 
 # Create your views here.
 def index(request): 
@@ -17,7 +19,17 @@ def index(request):
             # 요청값은, index.html로 보여지며, 안에 내용이 들어있다.
 
 def contact(request): 
-    pass 
+    if request.method == 'POST': # post요청일때 
+        pass       
+        
+    else:                     # get요청일때  
+        contact_eng = ContactForm()
+
+    context = {
+        'contact_eng': contact_eng,
+    }
+
+    return render(request, 'contact.html', context)
 
 def resume(request): 
     pass
